@@ -13,6 +13,7 @@ $token = 'VG10VkKCRJ2Gy3BFEb6TNJKAvNa8arkXvFLeWjSIzyy';
 
 
 echo send_line_notify($message, $token);
+echo "hello ทอปเอง"
 
 function send_line_notify($message, $token)
 {
