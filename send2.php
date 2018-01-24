@@ -1,20 +1,13 @@
 <?php
-
 //Get POST body content 
-$content = file_get_contents('php://input');
-//Parse JSON 
-$events = json_decode($content,true);
-
+// $content = file_get_contents('php://input');
+// //Parse JSON 
+// $events = json_decode($content,true);
 //$title = $events['payload']['title']
-
-
-$message = $events['payload']['title']
+// $message = $events['payload']['title']
+$message = "มันทรมานในหัวเอยยยยยยย หัวใจจจจจจ"
 $token = 'VG10VkKCRJ2Gy3BFEb6TNJKAvNa8arkXvFLeWjSIzyy';
-
-
 echo send_line_notify($message, $token);
-echo "hello ทอปเอง";
-
 function send_line_notify($message, $token)
 {
   $ch = curl_init();
@@ -29,12 +22,6 @@ function send_line_notify($message, $token)
   curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
   $result = curl_exec( $ch );
   curl_close( $ch );
-
   return $result;
 }
-
-
-
-
-
 ?>
